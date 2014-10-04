@@ -4,7 +4,7 @@
 // Change the speed value to alter how quickly the object rotates toward the mouse.
  
 // speed is the rate at which the object will rotate
-var speed = 4.0;
+var speed = 0.1;
  
 function Update () {
     // Generate a plane that intersects the transform's position with an upwards normal.
