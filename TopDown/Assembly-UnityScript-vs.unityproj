@@ -46,12 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EnemyMove.js" />
      <Compile Include="Assets\LookAtMouse.js" />
      <Compile Include="Assets\PlayerController.js" />
      <Compile Include="Assets\spray.js" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/NMSU/Fall2014/579/Project/abugsgame/TopDown/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Raul/Documents/GitHub/abugsgame/TopDown/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EnemyMove.js" />
      <Compile Include="Assets\LookAtMouse.js" />
      <Compile Include="Assets\PlayerController.js" />
      <Compile Include="Assets\spray.js" />

@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\spray.js">
     <Files>
-      <File FileName="Assets\PlayerController.js" Line="3" Column="1" />
-      <File FileName="Assets\LookAtMouse.js" Line="7" Column="16" />
+      <File FileName="..\WithWeapons\WithWeapons.sln" Line="1" Column="1" />
+      <File FileName="..\WithWeapons\Assets\PlayerController.js" Line="1" Column="1" />
+      <File FileName="Assets\PlayerController.js" Line="1" Column="1" />
+      <File FileName="Assets\LookAtMouse.js" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" Line="1" Column="1" />
