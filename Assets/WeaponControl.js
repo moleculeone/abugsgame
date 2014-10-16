@@ -15,7 +15,7 @@ function Start () {
 function Update () {
 	var clone : GameObject;
 		/// play spray effect
-		if(Input.GetKey(KeyCode.S))
+		if(Input.GetKey(KeyCode.W))
 		{
 			if (GameObject.FindWithTag("spray")==null)
 			{
