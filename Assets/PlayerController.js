@@ -27,13 +27,13 @@ transform.position -= transform.forward * movementSpeed * Time.deltaTime;
 
 
 
-if(Input.GetKey(KeyCode.X)){
+if(Input.GetKey(KeyCode.RightArrow)){
 //transform.rotation.y += rotationSpeed * Time.deltaTime;
 
 transform.Rotate(Vector3.up * rotationSpeed);
 }
 
-if(Input.GetKey(KeyCode.Z)){
+if(Input.GetKey(KeyCode.LeftArrow)){
 //transform.rotation.y -= rotationSpeed * Time.deltaTime;
 
 transform.Rotate(Vector3.down * rotationSpeed);
