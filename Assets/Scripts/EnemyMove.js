@@ -2,7 +2,8 @@
     var moveSpeed = 3;
     var rotationSpeed = 3;
     var retreatLength = 8;
-    static var moveback = false;
+    var damageCaused = 10;
+    private var moveback = false;
     private var startposition : Vector3;
     private var myTransform : Transform; //current transform data of this enemy
      
@@ -31,21 +32,29 @@
     
     myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
     Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed*Time.deltaTime);
-     
+    
+     	
+     	
 	    if (moveback==false)
 	    {
 	    	//move towards the player
 	    	myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
+	    	
+	    	//play attack animation when near player
+	    	if (Vector3.Distance(myTransform.position, target.position) < 3)
+		     	{
+		     		//animation.wrapMode=
+		     		animation.Play("Attack");
+		     	}
+		    
 	    }
 	    else
 	    {	
-	    	//move away from player
-		
+	    	animation.Play("Run");
+	    	//move away from player	
 	    	myTransform.position -= myTransform.forward * moveSpeed * Time.deltaTime;	    	
    	
-
-	    	
-			    if (Vector3.Distance(myTransform.position,startposition ) > retreatLength)
+		    if (Vector3.Distance(myTransform.position,startposition ) > retreatLength)
 			    {  
 			    	//variable to return to player
 			    	moveback=false;
@@ -65,9 +74,9 @@
     	if (info.tag=="Player" || info.tag=="Weapons" || info.tag=="bomb")
     	{
     		moveback=true;
-    		startposition = transform.position;
+    		startposition = myTransform.position;
     		
-     		
+     		Healthbar.HealthStatus+=damageCaused;
     	}
 
     }
@@ -75,6 +84,8 @@
 
 		if (other.tag =="spray")
 		{
+			animation.Play("Death");
+			//myTransform.
 			Destroy(transform.gameObject, 1);
 		}
 	}

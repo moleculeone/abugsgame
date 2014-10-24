@@ -29,7 +29,7 @@ function Update () {
 
 if (Input.GetKeyDown("w")){
 	animation.Play("Spray");
-	animation.Play("idleBugMan");
+	//animation.Play("idle");
 	}
 //animation.Play("idleBugMan");
 }

@@ -1569,8 +1569,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3, y: 3, z: 3}
+  m_Center: {x: 0, y: 1.55999994, z: 0}
 --- !u!111 &11100000
 Animation:
   m_ObjectHideFlags: 1
@@ -1603,11 +1603,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a2b989a5c8da244becbeaa625fd39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   moveSpeed: 3
   rotationSpeed: 3
   retreatLength: 8
-  myTransform: {fileID: 0}
+  damageCaused: 10
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
