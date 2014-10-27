@@ -10,7 +10,7 @@ function Update () {
 }
   function OnTriggerEnter (info : Collider) 
     {
-
+	
     	if (info.tag=="Player")
     	{
     	
