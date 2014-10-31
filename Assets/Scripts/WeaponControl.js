@@ -1,16 +1,23 @@
 ﻿#pragma strict
 var spray :  Transform;
 var bomb : GameObject;
+var bullet:Transform;
 
 internal var fireDelay : float;
 var Bspeed : float =10;
 var Bdistance : float = 5;
 var roteOffire : float = 1;
-var Bomblimit : int= 5;
-var Spraylimit : int = 5;
-
+static var Bomblimit : int;
+static var Spraylimit : int;
+static var StoneCount : int;
+var bomblimit= 5;
+var spraylimit= 5;
+var stonecount=0;
 function Start () {
 
+Bomblimit=bomblimit;
+Spraylimit=spraylimit;
+StoneCount=stonecount;
 }
 
 function Update () {
@@ -45,8 +52,19 @@ function Update () {
 			
 				}
 			}
+			
+			if( StoneCount >0)
+			{
 		
-	
+				if (Input.GetMouseButtonDown(0)){
+
+				var shoot = Instantiate(bullet, transform.position, transform.rotation);
+			    shoot.rigidbody.AddForce(shoot.transform.forward * 500.0);
+				//clone.velocity = transform.TransformDirection (Vector3.forward * 10);
+				StoneCount=StoneCount-1;
+				Destroy(shoot.gameObject, 2);
+				}
+			}	
 
 		
 }
