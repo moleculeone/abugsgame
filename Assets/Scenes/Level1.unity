@@ -852,7 +852,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &127855504
 Renderer:
   m_ObjectHideFlags: 0
@@ -2637,7 +2636,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 635366268}
   m_LocalRotation: {x: .173648193, y: 0, z: 0, w: .984807789}
-  m_LocalPosition: {x: 0, y: 0, z: .576118529}
+  m_LocalPosition: {x: -.344449997, y: -.23067832, z: 1.20990181}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 1223586718}
@@ -4190,7 +4189,7 @@ MonoBehaviour:
   snapSmoothLag: .200000003
   snapMaxSpeed: 720
   clampHeadPositionScreenSpace: .75
-  lockCameraTimeout: 0
+  lockCameraTimeout: 100
 --- !u!114 &1103611245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4778,10 +4777,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spray: {fileID: 400000, guid: 6b855608ee76c0d45bd883df9dd5f560, type: 2}
   bomb: {fileID: 100002, guid: fc85fc8aff2d25f439085b2d59dc2832, type: 2}
-  Bspeed: 10
-  Bdistance: 10
+  Bspeed: 5
+  Bdistance: 15
   roteOffire: .5
-  Bomblimit: 5
+  Bomblimit: 50
   Spraylimit: 5
 --- !u!23 &1223586721
 Renderer:
@@ -5217,7 +5216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 2314ce3a3eecf4816bad3c9eca4de2e1, type: 2}
       propertyPath: lockCameraTimeout
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 2314ce3a3eecf4816bad3c9eca4de2e1, type: 2}
       propertyPath: idleAnimation
