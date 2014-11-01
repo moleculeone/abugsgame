@@ -4863,13 +4863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spray: {fileID: 400000, guid: 6b855608ee76c0d45bd883df9dd5f560, type: 2}
   bomb: {fileID: 100002, guid: fc85fc8aff2d25f439085b2d59dc2832, type: 2}
-<<<<<<< HEAD
-  Bspeed: 5
-  Bdistance: 15
-  roteOffire: .5
-  Bomblimit: 50
-  Spraylimit: 5
-=======
+
   bullet: {fileID: 400000, guid: 2c75819e5a9dca04aa1c86141fc09193, type: 2}
   Bspeed: 10
   Bdistance: 10
@@ -4877,7 +4871,6 @@ MonoBehaviour:
   bomblimit: 5
   spraylimit: 5
   stonecount: 0
->>>>>>> 80ec400891df5ae9caf47ac627f22c15fd441252
 --- !u!23 &1223586721
 Renderer:
   m_ObjectHideFlags: 0
