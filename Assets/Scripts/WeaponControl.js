@@ -23,7 +23,7 @@ StoneCount=stonecount;
 function Update () {
 	var clone : GameObject;
 		/// play spray effect
-		if(Input.GetKey(KeyCode.W))
+		if(Input.GetKey(KeyCode.R))
 		{
 			if (Spraylimit>0)
 			{
@@ -39,7 +39,7 @@ function Update () {
 		
 	
 		
-			if(Input.GetKey(KeyCode.D) && Time.time > fireDelay)
+			if(Input.GetKey(KeyCode.F) && Time.time > fireDelay)
 			{
 				//limit bomb in a level
 				if (Bomblimit>0)
