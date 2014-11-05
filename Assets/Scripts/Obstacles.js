@@ -15,6 +15,8 @@ function Update () {
 
 function OnTriggerEnter(info:Collider){
 
+if(info.gameObject.tag=="Player"){
+
 showGUI= true;
 OnGUI();
 if(GameMaster.objectNumber != 1){
@@ -22,9 +24,12 @@ yield WaitForSeconds(2);
 }
 showGUI= false;
 
-
+}
 
 if(info.gameObject.tag=="Player" && GameMaster.objectNumber == 1){
+
+
+
 
 Destroy(gameObject);
 

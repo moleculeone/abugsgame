@@ -71,13 +71,23 @@
     function OnTriggerEnter (info : Collider) 
     {
 
-    	if (info.tag=="Player" || info.tag=="Weapons" || info.tag=="bomb")
+    	if (info.tag=="Player" || info.tag=="bomb")
     	{
     		moveback=true;
     		startposition = myTransform.position;
     		
      		Healthbar.HealthStatus+=damageCaused;
     	}
+    	
+    	Debug.Log(info.tag);
+    	
+    	if (info.tag=="Bullets" )
+    	{
+    		Destroy(gameObject);
+    	}
+    	
+    	
+    	
 
     }
 	function OnParticleCollision(other : GameObject) {

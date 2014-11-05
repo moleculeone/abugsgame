@@ -673,6 +673,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
   - 65: {fileID: 6500000}
+  - 65: {fileID: 6500002}
   m_Layer: 0
   m_Name: SPIDER 2
   m_TagString: Untagged
@@ -1403,7 +1404,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.0279999, y: .100000001, z: -27.9470005}
+  m_LocalPosition: {x: 31.0279999, y: .100000001, z: -32.5968781}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children:
   - {fileID: 400068}
@@ -1571,6 +1572,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 1.55999994, z: 0}
+--- !u!65 &6500002
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!111 &11100000
 Animation:
   m_ObjectHideFlags: 1
@@ -1588,6 +1601,7 @@ Animation:
   - {fileID: 7400010, guid: 130cac6b96af6214296215324b5da188, type: 3}
   - {fileID: 7400012, guid: 130cac6b96af6214296215324b5da188, type: 3}
   - {fileID: 7400014, guid: 130cac6b96af6214296215324b5da188, type: 3}
+  - {fileID: 7400018, guid: 1349125740339994e92e6db311390929, type: 3}
   m_WrapMode: 2
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
