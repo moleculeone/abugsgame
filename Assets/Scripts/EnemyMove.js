@@ -21,6 +21,8 @@
     function Update () 
     {
      myTransform = transform;
+     myTransform.position=Vector3(myTransform.position.x,.1,myTransform.position.z);
+     
     //changed target when light bomb is triggered
     if (GameObject.FindWithTag("bomb")!=null)
    	{
@@ -30,10 +32,15 @@
    		target = GameObject.FindWithTag("Player").transform; //target the player
      
     
-    myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
-    Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed*Time.deltaTime);
+   
     
-     	
+    var tpos=  target.position;
+    tpos=Vector3(target.position.x,0.1,target.position.z);
+    
+    myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
+    Quaternion.LookRotation(tpos - myTransform.position), rotationSpeed*Time.deltaTime);
+    
+
      	
 	    if (moveback==false)
 	    {
@@ -70,7 +77,7 @@
     }
     function OnTriggerEnter (info : Collider) 
     {
-
+	
     	if (info.tag=="Player" || info.tag=="bomb")
     	{
     		moveback=true;
@@ -79,7 +86,7 @@
      		Healthbar.HealthStatus+=damageCaused;
     	}
     	
-    	Debug.Log(info.tag);
+
     	
     	if (info.tag=="Bullets" )
     	{
