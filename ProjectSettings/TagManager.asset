@@ -10,6 +10,12 @@ TagManager:
   - terrain
   - Bullets
   - 
+  - soldier
+  - ob1
+  - ob2
+  - tool1
+  - tool2
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
