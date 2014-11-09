@@ -6,6 +6,8 @@ public class FireRayCast : MonoBehaviour {
 	public GameObject aimCursor;
 	public Transform fireFrom;
 	public float shotSpeed = 20.0f;
+
+
 	
 	void Update () {
 		RaycastHit rhInfo;
