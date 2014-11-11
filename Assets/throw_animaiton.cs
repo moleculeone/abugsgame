@@ -21,5 +21,8 @@ public class throw_animaiton : MonoBehaviour {
 						//animation.Play("throw");
 						animation.Play("spray_anim");
 				}
+
+		Debug.Log ("test");
+
 	}
 }
