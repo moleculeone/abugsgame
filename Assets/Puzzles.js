@@ -40,7 +40,7 @@ function OnTriggerEnter (info : Collider)
     	
     	if (info.tag=="ob2" && GameMaster.objectNumber == 2)
     	{
-    		bridge.transform.position.y = 0.2;
+    		bridge.transform.position.y = 0.5;
     		ob2.SetActive(false);
     	}
     	

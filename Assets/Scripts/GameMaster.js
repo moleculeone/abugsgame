@@ -13,6 +13,20 @@ var sizeX : float = 150;
 var sizeY : float = 100;
 
 
+
+function Update(){
+
+if (Input.GetKey(KeyCode.P)){
+
+Application.LoadLevel("Level1");
+}
+
+if (Input.GetKey(KeyCode.Escape)){
+
+Application.LoadLevel("MainMenu");
+}
+
+}
 function OnGUI() {
 	
 		var currentW=WeaponControl.CurrentWeapon;
