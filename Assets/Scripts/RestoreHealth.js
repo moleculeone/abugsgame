@@ -16,6 +16,8 @@ function Update () {
     	
     		Healthbar.HealthStatus-=HealthRestored;
     		Destroy(transform.gameObject,0);
+    		var player = GameObject.Find("Player");
+            player.transform.animation.Play("player_die");
     	}
     	
 

@@ -90,7 +90,9 @@
     	
     	if (info.tag=="Bullets" )
     	{
-    		Destroy(gameObject);
+    		animation.Play("Death");
+    		//yield WaitForSeconds(1);
+    		Destroy(gameObject,1);
     	}
     	
     	
