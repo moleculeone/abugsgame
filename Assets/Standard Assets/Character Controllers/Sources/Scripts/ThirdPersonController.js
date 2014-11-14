@@ -7,6 +7,13 @@ public var walkAnimation : AnimationClip;
 public var runAnimation : AnimationClip;
 public var jumpPoseAnimation : AnimationClip;
 
+public var walk_sound :AudioClip;
+public var walk : AudioClip;
+public var run : AudioClip;
+
+var isWalking : boolean = false;
+var isRunning : boolean = false;
+
 public var walkMaxAnimationSpeed : float = 0.75;
 public var trotMaxAnimationSpeed : float = 1.0;
 public var runMaxAnimationSpeed : float = 1.0;
@@ -204,6 +211,8 @@ function UpdateSmoothedMovementDirection ()
 		{
 			targetSpeed *= walkSpeed;
 			_characterState = CharacterState.Walking;
+			
+			
 		}
 		
 		moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, curSmooth);
@@ -286,7 +295,13 @@ function DidJump ()
 	_characterState = CharacterState.Jumping;
 }
 
+
+
+
 function Update() {
+	
+	 GetState();
+	 PlayAudio();
 	
 	if (!isControllable)
 	{
@@ -348,7 +363,9 @@ function Update() {
 				}
 				else if(_characterState == CharacterState.Walking) {
 					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, walkMaxAnimationSpeed);
-					_animation.CrossFade(walkAnimation.name);	
+					_animation.CrossFade(walkAnimation.name);
+					 //walkAudio();
+					 
 				}
 				
 			}
@@ -385,6 +402,75 @@ function Update() {
 		}
 	}
 }
+
+
+function GetState()
+{
+
+	if ( Input.GetAxisRaw( "Horizontal" ) || Input.GetAxisRaw( "Vertical" ) )
+	{
+	if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift))
+	{
+	// Running
+	isWalking = false;
+	isRunning = true;
+	//Debug.Log("Running");
+	}
+	else
+	{
+	// Walking
+	isWalking = true;
+	isRunning = false;
+	}
+	}
+	else
+	{
+	// Stopped
+	isWalking = false;
+	isRunning = false;
+	}
+}
+
+
+function PlayAudio()
+	{
+		if ( isWalking )
+		{
+		if ( audio.clip != walk )
+		{
+		audio.Stop();
+		audio.clip = walk;
+		}
+		if ( !audio.isPlaying )
+		{
+		audio.Play();
+		}
+		}
+		else if ( isRunning )
+		{
+		if ( audio.clip != run )
+		{
+		audio.Stop();
+		audio.clip = run;
+		Debug.Log("Running");
+		}
+		if ( !audio.isPlaying )
+		{
+		audio.Play();
+		}
+		}
+		else
+		{
+		audio.Stop();
+		}
+	}
+
+
+function walkAudio()
+{
+audio.PlayOneShot(walk_sound);	
+}
+
 
 function OnControllerColliderHit (hit : ControllerColliderHit )
 {

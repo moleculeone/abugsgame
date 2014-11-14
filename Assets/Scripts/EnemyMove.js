@@ -6,7 +6,8 @@
     private var moveback = false;
     private var startposition : Vector3;
     private var myTransform : Transform; //current transform data of this enemy
-     
+    public var dead_audio : AudioClip; 
+      
     function Awake()
     {
     //myTransform = transform; //cache transform data for easy access/preformance
@@ -92,6 +93,8 @@
     	{
     		animation.Play("Death");
     		//yield WaitForSeconds(1);
+    		audio.clip = dead_audio;
+    		audio.Play();
     		Destroy(gameObject,1);
     	}
     	

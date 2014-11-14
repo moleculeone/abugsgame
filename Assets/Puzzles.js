@@ -7,6 +7,8 @@ var bridge: GameObject;
 var ob1: GameObject;
 var ob2: GameObject;
 
+public var blocked : AudioClip;
+
 function Start () {
 obText1.enabled = false;
 obText2.enabled = false;
@@ -18,12 +20,15 @@ function Update () {
 
 function OnTriggerEnter (info : Collider) 
     {
+    		audio.clip = blocked;
+    		audio.Play();
 	
     	if (info.tag=="ob1" && GameMaster.objectNumber != 1)
     	{
     		obText1.enabled = true;
     		yield WaitForSeconds(2);
     		obText1.enabled = false;
+    		
     	}
     	
     	if (info.tag=="ob2" && GameMaster.objectNumber != 2)
