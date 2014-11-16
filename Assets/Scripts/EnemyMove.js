@@ -7,6 +7,7 @@
     private var startposition : Vector3;
     private var myTransform : Transform; //current transform data of this enemy
     public var dead_audio : AudioClip; 
+    public var player_damage_audio : AudioClip; 
       
     function Awake()
     {
@@ -84,6 +85,9 @@
     		moveback=true;
     		startposition = myTransform.position;
     		
+    		audio.clip = player_damage_audio;
+    		audio.Play();
+     		
      		Healthbar.HealthStatus+=damageCaused;
     	}
     	

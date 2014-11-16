@@ -1637,7 +1637,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: .649999976
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1681,6 +1681,7 @@ MonoBehaviour:
   retreatLength: 8
   damageCaused: 10
   dead_audio: {fileID: 8300000, guid: 7c4df0b316d033f459fe979719ebe984, type: 3}
+  player_damage_audio: {fileID: 8300000, guid: 4c9d6100074d1c3488b990ea65d5f8fd, type: 3}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
