@@ -16,7 +16,9 @@ function OnTriggerEnter(info:Collider){
 
 if(info.gameObject.tag=="Player"){
 
-Destroy(gameObject);
+//Destroy(gameObject);
+
+GetComponent(MeshRenderer).enabled=false;
 
 }
 
