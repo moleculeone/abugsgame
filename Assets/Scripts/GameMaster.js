@@ -5,7 +5,7 @@ var bomb : Texture;
 var Stone : Texture;
 var Spray : Texture;
 
-
+public var dieAnimation : AnimationClip;
 
 var offsetY : float = 5;
 var offsetX : float = 5;
@@ -24,7 +24,9 @@ Application.LoadLevel("Level1");
 if (Input.GetKey(KeyCode.Escape)){
 
 Application.LoadLevel("MainMenu");
+
 }
+
 
 }
 function OnGUI() {
@@ -106,3 +108,5 @@ function OnGUI() {
 		     GUI.EndGroup ();
 		GUI.skin.box.alignment = TextAnchor.UpperLeft;
 	}
+	
+	
