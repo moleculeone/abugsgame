@@ -79,8 +79,12 @@
     }
     function OnTriggerEnter (info : Collider) 
     {
-	
-    	if (info.tag=="Player" || info.tag=="bomb")
+		if(  info.tag=="bomb")
+		{
+			moveback=true;
+    		startposition = myTransform.position;
+		}
+    	if (info.tag=="Player")
     	{
     		moveback=true;
     		startposition = myTransform.position;
@@ -89,6 +93,8 @@
     		audio.Play();
      		
      		Healthbar.HealthStatus+=damageCaused;
+     		
+     	
     	}
     	
 

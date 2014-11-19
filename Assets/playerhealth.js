@@ -27,7 +27,7 @@ animation.Play("player_die");
 
 //yield WaitForSeconds(2);
 
-Destroy(gameObject, 2);
+//Destroy(gameObject, 2);
 
 }
 
