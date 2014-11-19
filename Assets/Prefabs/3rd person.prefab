@@ -420,6 +420,9 @@ GameObject:
   - 136: {fileID: 13600000}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400006}
+  - 82: {fileID: 8200000}
+  - 81: {fileID: 8100000}
+  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: 3rd person
   m_TagString: Player
@@ -1323,7 +1326,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.87150002, y: 1.94309998, z: -36.0480003}
+  m_LocalPosition: {x: 5.05499983, y: 1.94309998, z: -35.5960007}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400100}
@@ -1904,6 +1907,71 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!81 &8100000
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100054}
+  m_Enabled: 0
+--- !u!82 &8200000
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100054}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 1f653385f4f0d404c98694b5c6a85cd6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -1980,6 +2048,11 @@ MonoBehaviour:
   walkAnimation: {fileID: 7400016, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
   runAnimation: {fileID: 7400014, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
   jumpPoseAnimation: {fileID: 7400018, guid: 449b48f7eb5d87a4baaa5fb73f875a59, type: 3}
+  walk_sound: {fileID: 8300000, guid: 1f653385f4f0d404c98694b5c6a85cd6, type: 3}
+  walk: {fileID: 8300000, guid: 052581c7dfd863f46afb77118e60faf0, type: 3}
+  run: {fileID: 8300000, guid: a6ffa79d4fdfa994b8390f17751425a1, type: 3}
+  isWalking: 0
+  isRunning: 0
   walkMaxAnimationSpeed: .899999976
   trotMaxAnimationSpeed: 1.29999995
   runMaxAnimationSpeed: .899999976
@@ -2011,6 +2084,9 @@ MonoBehaviour:
   bridge: {fileID: 0}
   ob1: {fileID: 0}
   ob2: {fileID: 0}
+  toolText1: {fileID: 0}
+  toolText2: {fileID: 0}
+  blocked: {fileID: 8300000, guid: 7eb5f5270fc84884395254d70042e760, type: 3}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2036,7 +2112,8 @@ MonoBehaviour:
   bulletObject: {fileID: 100000, guid: 2c75819e5a9dca04aa1c86141fc09193, type: 2}
   aimCursor: {fileID: 0}
   fireFrom: {fileID: 400060}
-  shotSpeed: 20
+  shotSpeed: 60
+  crosshairImage: {fileID: 2800000, guid: 6f866827e71b9b44383bf2730df5ae3e, type: 3}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2058,6 +2135,19 @@ MonoBehaviour:
   spraylimit: 5
   stonecount: 0
   currentweapon: 3
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd5471e9a8642440911662b0562d386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieanimation: {fileID: 7400000, guid: da0306aede8b8144384e1083d4af0220, type: 2}
+  check: 1
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
