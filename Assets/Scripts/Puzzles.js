@@ -8,6 +8,8 @@ var ob1: GameObject;
 var ob2: GameObject;
 var toolText1: Text;
 var toolText2: Text;
+var endLevelPanel: GameObject;
+//static var showPanel:boolean=false;
 
 
 public var blocked : AudioClip;
@@ -17,9 +19,13 @@ obText1.enabled = false;
 obText2.enabled = false;
 toolText1.enabled = false;
 toolText2.enabled = false;
+endLevelPanel.SetActive(false);
 }
 
 function Update () {
+
+
+
 
 }
 
@@ -76,5 +82,22 @@ function OnTriggerEnter (info : Collider)
     	
     	}
     	
+    	if (info.tag=="tent")
+    	{
+    		endLevelPanel.SetActive(true);
+    		Screen.showCursor = true;
+    		
+    	}
+    	
+    	 	
+    	
       	
    }
+   
+   
+function Level2(){
+
+endLevelPanel.SetActive(false);
+
+Application.LoadLevel("Level3a");
+}
