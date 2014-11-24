@@ -18,14 +18,9 @@ function Update(){
 
 if (Input.GetKey(KeyCode.P)){
 
-Application.LoadLevel("Level1");
+Application.LoadLevel("Leve3a");
 }
 
-if (Input.GetKey(KeyCode.Escape)){
-
-Application.LoadLevel("MainMenu");
-
-}
 
 
 }
