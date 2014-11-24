@@ -22,7 +22,7 @@ public class throw_animaiton : MonoBehaviour {
 						//animation.Play("spray_anim");
 				}
 
-		Debug.Log ("test");
+	
 
 	}
 	

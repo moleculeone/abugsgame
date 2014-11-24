@@ -15,8 +15,18 @@ TagManager:
   - ob2
   - tool1
   - tool2
-  - tent
-  - endLevelPanel
+  - EnemyN1
+  - EnemyN2
+  - EnemyN3
+  - EnemyN4
+  - EnemyN5
+  - EnemyN6
+  - EnemyN7
+  - EnemyN8
+  - EnemyN9
+  - EnemyN10
+  - EnemyN11
+  - EnemyN12
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
