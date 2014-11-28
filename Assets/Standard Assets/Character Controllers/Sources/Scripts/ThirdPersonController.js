@@ -34,10 +34,12 @@ private var _characterState : CharacterState;
 
 // The speed when walking
 var walkSpeed = 2.0;
+static var walkspeed;
 // after trotAfterSeconds of walking we trot with trotSpeed
 var trotSpeed = 4.0;
 // when pressing "Fire3" button (cmd) we start running
-var runSpeed = 6.0;
+var runSpeed = 8.0;
+static var runspeed ;
 
 var inAirControlAcceleration = 3.0;
 
@@ -97,9 +99,14 @@ private var lastGroundedTime = 0.0;
 
 private var isControllable = true;
 
+
 function Awake ()
 {
-	moveDirection = transform.TransformDirection(Vector3.forward);
+//speed restrictions
+walkspeed=walkSpeed;
+runspeed=runSpeed;
+
+	moveDirection = transform.TransformDirection(Vector3.zero);//Vector3.forward);
 	
 	_animation = GetComponent(Animation);
 	if(!_animation)
@@ -149,16 +156,35 @@ function UpdateSmoothedMovementDirection ()
 	var h = Input.GetAxisRaw("Horizontal");
 
 	// Are we moving backwards or looking backwards
+	
 	if (v < -0.2)
-		movingBack = true;
+		movingBack = true;		
 	else
 		movingBack = false;
 	
+
 	var wasMoving = isMoving;
 	isMoving = Mathf.Abs (h) > 0.1 || Mathf.Abs (v) > 0.1;
 		
+	
+	
 	// Target direction relative to the camera
-	var targetDirection = h * right + v * forward;
+	//var targetDirection = h * right + v * forward;
+	/////////////////Raul modification////
+	if (h!=0)
+	{
+		var rota:Vector3= Vector3(0,walkSpeed * h,0);
+		transform.Rotate(rota);
+		isrotating = rota.y;
+	}	
+
+	var targetDirection=Vector3.forward * v;	
+	targetDirection = transform.TransformDirection(targetDirection);
+	targetDirection *= walkSpeed;
+	
+
+		
+	
 	
 	// Grounded controls
 	if (grounded)
@@ -181,9 +207,9 @@ function UpdateSmoothedMovementDirection ()
 			// Otherwise smoothly turn towards it
 			else
 			{
-				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 1000);
+				//moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 1000);
 				
-				moveDirection = moveDirection.normalized;
+				//moveDirection = moveDirection.normalized;
 			}
 		}
 		
@@ -300,6 +326,9 @@ function DidJump ()
 
 function Update() {
 	
+	
+	///running speed
+	runSpeed=runspeed;
 	 GetState();
 	 PlayAudio();
 	
@@ -325,7 +354,9 @@ function Update() {
 	ApplyJumping ();
 	
 	// Calculate actual motion
-	var movement = moveDirection * moveSpeed + Vector3 (0, verticalSpeed, 0) + inAirVelocity;
+	
+	var movement =moveDirection * moveSpeed + Vector3 (0, verticalSpeed, 0) + inAirVelocity;
+
 	movement *= Time.deltaTime;
 	
 	// Move the controller
@@ -377,7 +408,11 @@ function Update() {
 	if (IsGrounded())
 	{
 		
-		transform.rotation = Quaternion.LookRotation(moveDirection);
+		
+		//Debug.Log(v * forward);
+		//var rota= Vector3(0,walkSpeed * h,0);
+		//transform.Rotate(rota);
+		//transform.rotation = Quaternion.LookRotation(moveDirection);
 			
 	}	
 	else
@@ -386,7 +421,7 @@ function Update() {
 		xzMove.y = 0;
 		if (xzMove.sqrMagnitude > 0.001)
 		{
-			transform.rotation = Quaternion.LookRotation(xzMove);
+			//transform.rotation = Quaternion.LookRotation(xzMove);
 		}
 	}	
 	
@@ -414,6 +449,7 @@ function GetState()
 	// Running
 	isWalking = false;
 	isRunning = true;
+	
 	//Debug.Log("Running");
 	}
 	else
@@ -452,7 +488,7 @@ function PlayAudio()
 		{
 		audio.Stop();
 		audio.clip = run;
-		Debug.Log("Running");
+	
 		}
 		if ( !audio.isPlaying )
 		{
