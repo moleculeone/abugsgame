@@ -9,7 +9,7 @@ var NestNum=0;
 function Start () {
 	
 	
-		InvokeRepeating("spawn", 5, waitforsec);
+		InvokeRepeating("spawn", 0, waitforsec);
 		target = GameObject.FindWithTag("Player").transform; //target the 
 }
 
