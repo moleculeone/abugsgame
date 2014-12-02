@@ -171,19 +171,22 @@ function UpdateSmoothedMovementDirection ()
 	// Target direction relative to the camera
 	//var targetDirection = h * right + v * forward;
 	/////////////////Raul modification////
-	if (h!=0)
-	{
+	//if (h!=0)
+	//{
 		var rota:Vector3= Vector3(0,walkSpeed * h,0);
 		transform.Rotate(rota);
-		isrotating = rota.y;
-	}	
 
-	var targetDirection=Vector3.forward * v;	
-	targetDirection = transform.TransformDirection(targetDirection);
-	targetDirection *= walkSpeed;
-	
-
+	//}	
+	if (h==0)
+	{
+		var targetDirection=Vector3.forward * v;	
+		targetDirection = transform.TransformDirection(targetDirection);
+		targetDirection *= walkSpeed;
 		
+		
+	}
+
+	
 	
 	
 	// Grounded controls
