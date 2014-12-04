@@ -23,8 +23,10 @@
     function Update () 
     {
      myTransform = transform;
-     myTransform.position=Vector3(myTransform.position.x,.1,myTransform.position.z);
+     //myTransform.position=Vector3(myTransform.position.x,.1,myTransform.position.z);
      
+     myTransform.position=Vector3(myTransform.position.x,myTransform.position.y,myTransform.position.z);
+    
     //changed target when light bomb is triggered
     if (GameObject.FindWithTag("bomb")!=null)
    	{
