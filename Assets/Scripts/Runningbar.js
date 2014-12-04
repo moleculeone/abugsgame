@@ -15,8 +15,7 @@ function Start () {
 function Update () {
 	 //barDisplay = HealthStatus; 
 	
-	if ( Input.GetAxisRaw( "Horizontal" ) || Input.GetAxisRaw( "Vertical" ) )
-	{
+
 		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift))
 		{
 			runningTime -= Time.deltaTime;
@@ -28,21 +27,17 @@ function Update () {
 				runningTime=0;
 			}
 		}
-	}
+
 	else if (runningTime!=origvalue && Input.GetKey(KeyCode.LeftShift)==false && Input.GetKey (KeyCode.RightShift)==false )
 	{
 		runningTime += Time.deltaTime/3;
 		if (runningTime>=origvalue)		
-		{Showvar=false;
+		{
+		Showvar=false;
 		runningTime=origvalue;
 		}
 	}
-	 //regain health
-	/* if (runningTime!=origvalue)
-	 {
-		runningTime -= Time.deltaTime;
-		runningTime *=-2;
-	 }*/
+
 	
 }
 function OnGUI() {

@@ -28,6 +28,16 @@ TagManager:
   - EnemyN11
   - EnemyN12
   - 
+  - Enemy
+  - BigGate1
+  - BigGate2
+  - BigGate3
+  - BigGate4
+  - BigGate5
+  - BigGate6
+  - BigGate7
+  - BigGate8
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
