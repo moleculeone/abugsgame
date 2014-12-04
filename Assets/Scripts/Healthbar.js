@@ -4,7 +4,7 @@ var barDisplay : float = 0;
 var pos : Vector2 = new Vector2(20,40); 
 var size : Vector2 = new Vector2(200,20); 
 
-static var HealthStatus : int =0;
+static var HealthStatus : float =0;
 
 
 private var currentStyle: GUIStyle  = null;
