@@ -249,16 +249,16 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _MainTex_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
-      data:
-        first:
           name: _Displacement
         second: {r: 6.6371665, g: 20.3539829, b: -1, a: -.681415975}
       data:
         first:
           name: _ShoreTiling
         second: {r: 1, g: 1, b: .100000001, a: .100000001}
+      data:
+        first:
+          name: _MainTex_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
           name: _BumpMap_ST
@@ -286,7 +286,7 @@ Material:
       data:
         first:
           name: _BumpTiling
-        second: {r: .119999997, g: .0700000003, b: .0799999982, a: .0599999987}
+        second: {r: .119999997, g: .0700000003, b: .0714000016, a: .0599999987}
       data:
         first:
           name: _BumpDirection

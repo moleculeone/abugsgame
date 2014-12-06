@@ -25,7 +25,8 @@ function OnGUI() {
  GUI.BeginGroup (new Rect (Screen.width / 2 - size.x / 2, pos.y, size.x, size.y));
 
      GUI.Box (Rect (0,0, size.x, size.y),"",currentStyle);
- 
+ 	 
+ 	 
      // draw the filled-in part:
      GUI.BeginGroup (new Rect (0, 0, size.x - (HealthStatus * 2), size.y));
          GUI.Box (Rect (0,0, size.x, size.y),"",currentStyle2 );
