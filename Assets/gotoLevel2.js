@@ -6,6 +6,10 @@ function Start () {
 
 function OnGUI () {
 
-Application.LoadLevel("Level2_Scene");
 
+
+}
+
+function GotoL2(){
+Application.LoadLevel("Level2_Scene");
 }

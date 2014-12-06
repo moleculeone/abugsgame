@@ -7,4 +7,10 @@ public class NewGame : MonoBehaviour {
 
 		Application.LoadLevel(Levelnum);
 	}
+
+
+	public void StartGame2(){
+		
+		Application.LoadLevel("Level2_Scene");
+	}
 }
