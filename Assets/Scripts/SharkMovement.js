@@ -20,13 +20,20 @@ function Update () {
 	
 	if (WaterCollider.inWater==true)
 	{
-      
-	 ztarget=target.position.z-transform.position.z;
+	   
+	 ztarget=Vector3.Distance(target.position,transform.position);
 	 	
-	 Debug.Log(ztarget);	
+	
+     if (transform.position.y >0 )  
+     {  
+     transform.position=Vector3(transform.position.x,0,transform.position.z);
+     Debug.Log(  transform.position);
+     }
+     else
+     transform.position=Vector3(transform.position.x,transform.position.y ,transform.position.z);
+    	
 	 	
-	 	
-		if (ztarget < triggerdistance && ztarget > -triggerdistance && isattacking==false)
+		if (ztarget < triggerdistance && isattacking==false)
 		{		
 			isactive=true;
 			var tpos=  target.position;   
@@ -35,9 +42,9 @@ function Update () {
 		   	transform.position += transform.forward * normalspeed * Time.deltaTime;
 	
 			//transform.position+=Vector3.forward  *normalspeed* Time.deltaTime;
-			
+		
 		}
-		else if (ztarget < -10 && isattacking==false && isactive == true)
+		if (ztarget>= (triggerdistance*1.8) && isattacking==false && isactive == true)
 		{
 			isattacking=true;
 	
@@ -46,13 +53,18 @@ function Update () {
 		if (isactive==true && isattacking==true )
 		{
 	
-			
+	
 			tpos=  target.position;   
 		    transform.rotation = Quaternion.Slerp(transform.rotation,
 		    Quaternion.LookRotation(tpos - transform.position), Time.deltaTime);
 		   	transform.position += transform.forward * attackspeed*  Time.deltaTime;
 		
 		}
+	}
+	else
+	{
+		isactive=false;
+		isattacking=false;
 	}
 }
 

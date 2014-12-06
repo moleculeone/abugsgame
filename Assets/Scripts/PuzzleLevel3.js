@@ -1,11 +1,10 @@
 ﻿#pragma strict
 import UnityEngine.UI;
 
-var obText1: Text;
-var obText2: Text;
+
 var bridge: GameObject;
-var ob1: GameObject;
-var ob2: GameObject;
+var bridge2: GameObject;
+//var ob2: GameObject;
 //static var showPanel:boolean=false;
 
 
@@ -26,8 +25,9 @@ function OnTriggerEnter (info : Collider)
 		
     	if (info.tag=="tool2")
     	{
-    	bridge.transform.position.y = (-0.23);
-    	ob2.SetActive(false);
+    	bridge.SetActive(false);
+    	bridge2.transform.position.y = (-0.23);
+
     	//GameMaster.objectNumber = 2;
     	//toolText2.enabled = true;
     	yield WaitForSeconds(3);
