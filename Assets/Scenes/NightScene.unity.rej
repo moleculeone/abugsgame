@@ -1,0 +1,55 @@
+diff a/Assets/Scenes/NightScene.unity b/Assets/Scenes/NightScene.unity	(rejected hunks)
+@@ -243,6 +243,53 @@
+   - {fileID: 1424704077}
+   m_Father: {fileID: 1843261009}
+   m_RootOrder: 0
++<<<<<<< HEAD
++=======
++--- !u!1001 &110450785
++Prefab:
++  m_ObjectHideFlags: 0
++  serializedVersion: 2
++  m_Modification:
++    m_TransformParent: {fileID: 0}
++    m_Modifications:
++    - target: {fileID: 400000, guid: 958f2f95dde172d44adeec8efa7ce5ae, type: 2}
++      propertyPath: m_LocalPosition.x
++      value: 1124.09998
++      objectReference: {fileID: 0}
++    - target: {fileID: 400000, guid: 958f2f95dde172d44adeec8efa7ce5ae, type: 2}
++      propertyPath: m_LocalPosition.y
++      value: 11.3920002
++      objectReference: {fileID: 0}
++    - target: {fileID: 400000, guid: 958f2f95dde172d44adeec8efa7ce5ae, type: 2}
++      propertyPath: m_LocalPosition.z
++      value: 693.02002
++      objectReference: {fileID: 0}
++    - target: {fileID: 400000, guid: 958f2f95dde172d44adeec8efa7ce5ae, type: 2}
++      propertyPath: m_LocalRotation.x
++      value: .743704736
++      objectReference: {fileID: 0}
++    - target: {fileID: 400000, guid: 958f2f95dde172d44adeec8efa7ce5ae, type: 2}
++      propertyPath: m_LocalRotation.y
++      value: -.462887108
++      objectReference: {fileID: 0}
++    - target: {fileID: 400000, guid: 958f2f95dde172d44adeec8efa7ce5ae, type: 2}
++      propertyPath: m_LocalRotation.z
++      value: -.128729835
++      objectReference: {fileID: 0}
++    - target: {fileID: 400000, guid: 958f2f95dde172d44adeec8efa7ce5ae, type: 2}
++      propertyPath: m_LocalRotation.w
++      value: -.464830607
++      objectReference: {fileID: 0}
++    - target: {fileID: 400000, guid: 958f2f95dde172d44adeec8efa7ce5ae, type: 2}
++      propertyPath: m_RootOrder
++      value: 4
++      objectReference: {fileID: 0}
++    m_RemovedComponents: []
++  m_ParentPrefab: {fileID: 100100000, guid: 958f2f95dde172d44adeec8efa7ce5ae, type: 2}
++  m_RootGameObject: {fileID: 1481204493}
++  m_IsPrefabParent: 0
++  m_IsExploded: 1
++>>>>>>> 98d4c0aedea365933e3f67d85c23d3d0b4446626
+ --- !u!1 &111501130
+ GameObject:
+   m_ObjectHideFlags: 0
