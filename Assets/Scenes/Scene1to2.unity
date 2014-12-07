@@ -105,7 +105,7 @@ RectTransform:
   m_Children:
   - {fileID: 790198911}
   m_Father: {fileID: 1560583363}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 293.079987, y: -246.279999}
@@ -130,11 +130,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: .501960814, g: .501960814, b: .501960814, a: .501960814}
+    m_NormalColor: {r: .0588235259, g: .0562283695, b: .0562283695, a: 0}
     m_HighlightedColor: {r: .501960814, g: .501960814, b: .501960814, a: .698039234}
     m_PressedColor: {r: .345098048, g: .345098048, b: .345098048, a: .698039234}
     m_DisabledColor: {r: .250980407, g: .250980407, b: .250980407, a: .501960814}
-    m_ColorMultiplier: 2
+    m_ColorMultiplier: 2.13000011
     m_FadeDuration: .100000001
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -150,9 +150,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: be1205cc4af77a14b9b64efa3a49fb63, type: 3}
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 637458259}
+        m_MethodName: StartGame2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 4032fda1011ad0544b199503dfee93b4, type: 2}
   m_Color: {r: .0955882072, g: .0871539563, b: .0871539563, a: .709803939}
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
@@ -203,6 +203,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd40f06a4be3d3f40a849a794c20ca80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &637458258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 637458260}
+  - 114: {fileID: 637458259}
+  m_Layer: 0
+  m_Name: _Manager2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &637458259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 637458258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1205cc4af77a14b9b64efa3a49fb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &637458260
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 637458258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -36.5788193, y: 15.2263632, z: -6.67538071}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &790198910
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1560583363}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1185538272
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1518023164
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +493,7 @@ RectTransform:
   m_LocalScale: {x: .833402097, y: .774298012, z: 1}
   m_Children: []
   m_Father: {fileID: 1560583363}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -514,12 +553,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1829418250}
   - {fileID: 1518023165}
   - {fileID: 599378009}
+  - {fileID: 1829418250}
+  - {fileID: 1990898873}
   - {fileID: 940254078}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -574,7 +614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1829418248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,7 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 22
@@ -600,9 +640,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You have safely found the camp so you can spend some time safely in the
-    Camp. However you cannot always stay here, you  need a safer place. Find a cave
-    to spend the night before it gets dark. '
+  m_Text: Find the correct Door to the cave!!!
 --- !u!222 &1829418249
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -618,12 +656,79 @@ RectTransform:
   m_GameObject: {fileID: 1829418247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .870588779, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1560583363}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 300}
+  m_AnchoredPosition: {x: 310.219788, y: -183.389999}
+  m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &1990898872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1990898873}
+  - 222: {fileID: 1990898875}
+  - 114: {fileID: 1990898874}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1990898873
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1990898872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .870589018, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1560583363}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 312.48999, y: -158.490005}
+  m_SizeDelta: {x: 250, y: 50}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1990898874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1990898872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 22
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Mission 2:'
+--- !u!222 &1990898875
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1990898872}
+  m_HideIfInvisible: 0

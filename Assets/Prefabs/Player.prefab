@@ -477,6 +477,7 @@ GameObject:
   - 65: {fileID: 6500000}
   - 23: {fileID: 2300002}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400014}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -1326,7 +1327,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.3160019, y: 1.94000006, z: -44.2410011}
+  m_LocalPosition: {x: -36.6450005, y: 15.2419996, z: -7.26130009}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400100}
@@ -2125,7 +2126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos: {x: 200, y: 40}
   size: {x: 200, y: 20}
-  runningTime: 0
+  runningTime: 20
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2145,8 +2146,24 @@ MonoBehaviour:
   roteOffire: .5
   bomblimit: 5
   spraylimit: 5
-  stonecount: 20
+  stonecount: 0
   currentweapon: 3
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae62fe0df68bcc043ac8b46e1ef32670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletObject: {fileID: 0}
+  aimCursor: {fileID: 0}
+  fireFrom: {fileID: 0}
+  shotSpeed: 20
+  crosshairImage: {fileID: 0}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

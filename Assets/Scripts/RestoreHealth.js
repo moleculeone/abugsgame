@@ -16,7 +16,9 @@ function Update () {
     	if (info.tag=="Player")
     	{
     	
-    		Healthbar.HealthStatus-=HealthRestored;
+    		if (Healthbar.HealthStatus > 0 )
+    			Healthbar.HealthStatus-=HealthRestored;
+    	
     		//audio.clip = restore_health;
     		//audio.Play();
     		audio.PlayOneShot(restore_health);
